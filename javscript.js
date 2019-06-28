@@ -4,6 +4,7 @@ function Calculator () {
 
         function multi(a,b){
         multplication=a*b;
+        console.log('-----------------')
         console.log("multplication",multplication)
 
         }
@@ -11,6 +12,7 @@ function Calculator () {
         function div(a,b){
 
             division=a/b;
+            console.log('-----------------')
             console.log("division",division)
 
 
@@ -18,6 +20,7 @@ function Calculator () {
         function add(a,b){
 
             addition=a+b;
+            console.log('-----------------')
             console.log("addition",addition)
 
 
@@ -25,6 +28,7 @@ function Calculator () {
         function sub(a,b){
 
             substraction=a-b;
+            console.log('-----------------')
             console.log("substraction",substraction)
 
         }
@@ -32,12 +36,14 @@ function Calculator () {
         function min(a,b){
 
             a<b? minimum=a:minimum=b;
+            console.log('-----------------')
             console.log("minimum",minimum)
         }
 
         function max(a,b){
 
             a>b? maximum=a:maximum=b;
+            console.log('-----------------')
             console.log("maximum",maximum)
 
 
