@@ -48,14 +48,14 @@ function Calculator () {
             divi(l,m)
         }
 
-         else if (res[1] == '+')
+         else if(res[1] == '+')
         {
-            l=res[0]
-            m=res[2]
+            l=parseInt(res[0])
+            m=parseInt(res[2])
 
             add(l,m)
         }
-        else(res[1] == '-')
+        else if(res[1] == '-')
         {
             l=res[0]
             m=res[2]
@@ -68,7 +68,7 @@ function Calculator () {
 
 }
     calculator = new Calculator()
-    calculator.evaluate('10 + 2')
+    calculator.evaluate('20 * 2')
 
 
 
