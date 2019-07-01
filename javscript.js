@@ -1,6 +1,15 @@
 function Calculator () {
+
+var x;
+
+    this.store =function(y){
+            this.x=y.peaches;
+            console.log("-------")
+            console.log('peaches')
+            }
     this.evaluate = function(string){
         var res = string.split(" ");
+
 
         function multi(a,b){
         multplication=a*b;
@@ -34,8 +43,9 @@ function Calculator () {
         }
 
         function min(a,b){
-
-            a<b? minimum=a:minimum=b;
+            k = parseInt(a);
+            j = parseInt(b);
+            k<j? minimum=k:minimum=j;
             console.log('-----------------')
             console.log("minimum",minimum)
         }
@@ -46,15 +56,17 @@ function Calculator () {
             console.log('-----------------')
             console.log("maximum",maximum)
 
-        }
-
-        function round(values,decimals){
-            return number(math.round(value+'e'+decimals)+'e-'+decimals);
-
 
         }
-        // console.log(res)
-        if(res[1] == '*')
+        function round(a){
+            var m=Math.round(a)
+            console.log('-----------------')
+            console.log("round")
+            console.log(m);
+        }
+
+
+    if(res[1] == '*')
         {
             l=res[0]
             m=res[2]
@@ -62,6 +74,20 @@ function Calculator () {
             multi(l,m)
 
         }
+        else if(res[0]=='peaches')
+        {
+            m=parseInt(res[2])
+            if(res[1]=='-'){
+            console.log(this.x - m);
+             }
+             else if(res[1]== '>='){
+                console.log('--------')
+                console.log("condition")
+                console.log(this.x >= m)
+             }
+        }
+
+
         else if(res[1] == '/')
         {
             l=res[0]
@@ -94,29 +120,28 @@ function Calculator () {
             m=res[2]
             max(l,m)
         }
+
+        else if(res[0] == 'round')
+        {
+
+            round(res[1])
+
+        }
+
+
     }
-    // else if(res[0]=='round')
-    //     {
-    //         l=res[1]
-    //         m=res[2]
-    //         round(l,m)
-    //     }
-
-
 }
     calculator = new Calculator()
     calculator.evaluate('20 * 2')
     calculator.evaluate("20 - 2");
     calculator.evaluate("20 / 2");
     calculator.evaluate("20 + 2");
-    calculator.evaluate('maximum 20 2');
-    calculator.evaluate('minimum 20 2');
-    // calculator.evaluate("20 + 1 * 2");
-    calculator.evaluate('round(8.2759, 2)')
-
-
-
-
+    calculator.evaluate('maximum 200 220');
+    calculator.evaluate('minimum 100 20');
+    calculator.evaluate('round 8.48')
+    calculator.store({peaches: 15})
+    calculator.evaluate('peaches - 5')
+    calculator.evaluate('peaches >= 15')
 
 
 
