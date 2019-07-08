@@ -78,15 +78,15 @@ var x;
         {
             m=parseInt(res[2])
             if(res[1]=='-'){
+                // console.log(res)
             console.log(this.x - m);
              }
-             else if(res[1]== '>='){
+             else if(res[1] == '>='){
                 console.log('--------')
                 console.log("condition")
                 console.log(this.x >= m)
              }
         }
-
 
         else if(res[1] == '/')
         {
@@ -130,6 +130,14 @@ var x;
 
 
     }
+    // this.evaluate = function(string,obj){
+    //     console.log(string)
+    //     // console.log(obj)
+    //     var res = string.split(" ");
+    //     console.log(res)
+    // }
+
+
 }
     calculator = new Calculator()
     calculator.evaluate('20 * 2')
@@ -142,6 +150,8 @@ var x;
     calculator.store({peaches: 15})
     calculator.evaluate('peaches - 5')
     calculator.evaluate('peaches >= 15')
+    // calculator.evaluate('kiwi + 5', {kiwi: 2})
+
 
 
 
